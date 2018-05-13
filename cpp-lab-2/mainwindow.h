@@ -38,6 +38,19 @@ public:
     ~MainWindow();
 //deklaracja metod prywatnych
 
+private slots:
+    void on_actionCut_triggered();
+
+    void on_actionPaste_triggered();
+
+    void on_actionCopy_triggered();
+
+    void on_actionUndo_triggered();
+
+    void on_actionRedo_triggered();
+
+    void on_actionOpen_triggered();
+
 private:
     //ui jest wskaznikiem do Mainwindom w namespace Ui
     Ui::MainWindow *ui;
