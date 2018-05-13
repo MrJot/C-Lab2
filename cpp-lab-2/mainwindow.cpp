@@ -80,3 +80,30 @@ void MainWindow::on_actionOpen_triggered()
 
     file.close();
 }
+
+void MainWindow::on_actionSave_as_triggered()
+{
+    QString filePath = QFileDialog::getSaveFileName(this, "Save the file");
+    saveToFile(filePath);
+}
+
+
+
+void MainWindow::saveToFile(QString filePath)
+{
+    QFile file(filePath);
+    if (!file.open(QFile::WriteOnly | QFile::Text)) {
+        return;
+    }
+
+    QTextStream out(&file);
+    //out << ui->textEdit->toPlainText();
+    out << ui->textEdit->toHtml();
+    file.flush();
+    file.close();
+}
+
+void MainWindow::on_actionSave_triggered()
+{
+
+}

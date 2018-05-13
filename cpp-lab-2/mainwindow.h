@@ -51,9 +51,14 @@ private slots:
 
     void on_actionOpen_triggered();
 
+    void on_actionSave_as_triggered();
+
+    void on_actionSave_triggered();
+
 private:
     //ui jest wskaznikiem do Mainwindom w namespace Ui
     Ui::MainWindow *ui;
+    void saveToFile(QString filePath);
 };
 
 #endif // MAINWINDOW_H
