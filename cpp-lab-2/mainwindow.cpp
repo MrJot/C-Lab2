@@ -22,7 +22,7 @@ MainWindow::MainWindow(QWidget *parent) :
   // C c1 - obiekt jest na stosie
   // new c2 - obiekt trafia na strerte (tutaj kontrolujemy czas zycia obiektu, mamy na to wplyw)
   //zmienna to nzawana komorka w pamieci
-
+  //R A I I - POCZYTAC O TYM (resaurce acousition)
 {
     ui->setupUi(this);
 }
